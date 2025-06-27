@@ -6,7 +6,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.material_orders_app"
+    namespace = "com.mikai.materialordersapp"
     compileSdkVersion(34)
     ndkVersion = "25.1.8937393"
     // ... altre configurazioni ...
@@ -26,7 +26,7 @@ android {
 
     defaultConfig {
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
-        applicationId = "com.example.material_orders_app"
+        applicationId = "com.mikai.materialordersapp"
         // You can update the following values to match your application needs.
         // For more information, see: https://flutter.dev/to/review-gradle-config.
         minSdkVersion(21)
