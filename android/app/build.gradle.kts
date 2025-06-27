@@ -8,7 +8,7 @@ plugins {
 android {
     namespace = "com.example.material_orders_app"
     compileSdkVersion(34)
-    ndkVersion = "27.0.12077973"
+    ndkVersion = "25.1.8937393"
     // ... altre configurazioni ...
 
     compileOptions {
@@ -33,13 +33,19 @@ android {
         targetSdkVersion(34)
         versionCode = 1
         versionName = "1.0"
+        multiDexEnabled = true
     }
 
     buildTypes {
         release {
             isMinifyEnabled = false
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
+            signingConfig = signingConfigs.getByName("debug")
         }
+    }
+
+    buildFeatures {
+        buildConfig = true
     }
 }
 
@@ -49,4 +55,7 @@ flutter {
 
 dependencies {
     implementation("org.jetbrains.kotlin:kotlin-stdlib:1.9.22")
+    implementation("androidx.multidex:multidex:2.0.1")
+    implementation("androidx.window:window:1.0.0")
+    implementation("androidx.window:window-java:1.0.0")
 }
